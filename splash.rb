@@ -2,8 +2,8 @@
 class Splash < Formula
   desc "Smoothed Particle Hydrodynamics visualisation tool"
   homepage "http://users.monash.edu.au/~dprice/splash"
-  url "http://users.monash.edu.au/~dprice/splash/releases/splash-2.8.0.tar.gz"
-  sha256 "de06b159846bd20717a55ec7cc9420e0fd86ab38dc66dc74b1f61b77b4d24fce"
+  url "http://users.monash.edu.au/~dprice/splash/releases/splash-2.9.0.tar.gz"
+  sha256 "a3fa807ce2322421af3719fdc87d9214e6937c5ba004e7d8767d32f9e74d8cf9"
   depends_on "gcc"
   depends_on "giza"
 
