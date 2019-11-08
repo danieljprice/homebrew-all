@@ -10,7 +10,7 @@ class Splash < Formula
 
   def install
     ENV.deparallelize
-    system "make", "all", "gadgethdf5", "falcON", "amuse_hdf5", "cactus_hdf5", "SYSTEM=gfortran", "PREFIX=#{prefix}/", "GIZA_DIR=#{HOMEBREW_PREFIX}", "CC=#{ENV.cc}", "HDF5_DIR=#{HOMEBREW_PREFIX}"
+    system "make", "all", "gadgethdf5", "falcON", "amuse_hdf5", "cactus_hdf5", "SYSTEM=gfortran", "PREFIX=#{prefix}/", "GIZA_DIR=#{HOMEBREW_PREFIX}", "CC=#{ENV.cc}", "HDF5ROOT=#{HOMEBREW_PREFIX}"
     mkdir_p bin.to_s # equivalent to mkdir -p #{bin}
     system "make", "install", "PREFIX=#{prefix}"
   end
