@@ -8,6 +8,10 @@ class Splash < Formula
   depends_on "giza"
   depends_on "hdf5"
 
+  head do
+    url "https://github.com/danieljprice/splash", :using => :git
+  end
+
   def install
     ENV.deparallelize
     system "make", "all", "gadgethdf5", "falcON", "amuse_hdf5", "cactus_hdf5", "SYSTEM=gfortran", "PREFIX=#{prefix}/", "GIZA_DIR=#{HOMEBREW_PREFIX}", "CC=#{ENV.cc}", "HDF5ROOT=#{HOMEBREW_PREFIX}"
