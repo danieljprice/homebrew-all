@@ -1,5 +1,5 @@
 # splash homebrew install script
-class Splash-image < Formula
+class Splash_image < Formula
   desc "Smoothed Particle Hydrodynamics image manipulation tools"
   homepage "http://users.monash.edu.au/~dprice/splash"
   url "https://github.com/danieljprice/splash", :using => :git
