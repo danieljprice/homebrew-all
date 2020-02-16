@@ -8,6 +8,10 @@ class Giza < Formula
   depends_on "cairo-x11" => :build
   depends_on :x11
 
+  head do
+    url "https://github.com/danieljprice/giza", :using => :git
+  end
+
   def install
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
