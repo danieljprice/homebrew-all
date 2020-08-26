@@ -1,0 +1,27 @@
+name: brew-install
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  brewcheck:
+    # The type of runner that the job will run on
+    runs-on: macos-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: tap the repo
+      run: brew tap danieljprice/all
+
+    - name: install all taps using homebrew
+      run: for x in `$(brew --prefix)/Homebrew/Library/Taps/danieljprice/homebrew-all/*.rb | xargs -I{} basename {} .rb`; do brew install $x; done
+
