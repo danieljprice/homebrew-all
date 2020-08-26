@@ -2,8 +2,9 @@
 class Denoise < Formula
   desc "Utility for de-noising astronomical images using adaptive kernel interpolation"
   homepage "http://github.com/danieljprice/denoise"
-  url "https://github.com/danieljprice/denoise/releases/download/v0.1.4/denoise-v0.1.4.tar.gz"
-  sha256 "705f4a6672784ab65e30eb0b34d89f120128f55ddcf0842c2300ef0afd763b64"
+  url "https://github.com/danieljprice/denoise/releases/download/v0.2.0/denoise-v0.2.0.tar.gz"
+  version "0.2.0"
+  sha256 "c8cc28ba14ae641ce8b51f8300c200b5b83e3dce7abc6cff529de5140104ce5e"
   depends_on "gcc"
   depends_on "cfitsio"
 
