@@ -2,8 +2,9 @@
 class ActionTests < Formula
   desc "Utility for de-noising astronomical images using adaptive kernel interpolation"
   homepage "http://github.com/danieljprice/denoise"
-  url "https://github.com/danieljprice/denoise/releases/download/v0.1.4/denoise-v0.1.4.tar.gz"
-  sha256 "705f4a6672784ab65e30eb0b34d89f120128f55ddcf0842c2300ef0afd763b64"
+  url "https://github.com/danieljprice/action-tests/releases/download/v0.1.25/action-tests-v0.1.25.tar.gz"
+  version "0.1.25"
+  sha256 "9e96789d21d02bc798eed0b82a837930cdb50afd3ef403c7443a39f3a33ff921"
   depends_on "gcc"
   depends_on "cfitsio"
 
