@@ -1,5 +1,5 @@
 # splash homebrew install script
-class Denoise < Formula
+class ActionTests < Formula
   desc "Utility for de-noising astronomical images using adaptive kernel interpolation"
   homepage "http://github.com/danieljprice/denoise"
   url "https://github.com/danieljprice/denoise/releases/download/v0.1.4/denoise-v0.1.4.tar.gz"
