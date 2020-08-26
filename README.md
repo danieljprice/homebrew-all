@@ -1,3 +1,7 @@
+![splash](https://github.com/danieljprice/homebrew-all/workflows/splash/badge.svg)
+![giza](https://github.com/danieljprice/homebrew-all/workflows/giza/badge.svg)
+![denoise](https://github.com/danieljprice/homebrew-all/workflows/denoise/badge.svg)
+
 # brew tap daniejprice/all
 
 Homebrew install scripts ("taps") for various packages I maintain, including:
