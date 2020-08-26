@@ -22,6 +22,12 @@ jobs:
     - name: tap the repo
       run: brew tap danieljprice/all
 
-    - name: install all taps using homebrew
-      run: for x in `$(brew --prefix)/Homebrew/Library/Taps/danieljprice/homebrew-all/*.rb | xargs -I{} basename {} .rb`; do brew install $x; done
+    - name: install splash with homebrew
+      run: brew install splash
+
+    - name: install denoise with homebrew
+      run: brew install denoise
+
+#  - name: install all taps using homebrew
+#    run: for x in `$(brew --prefix)/Homebrew/Library/Taps/danieljprice/homebrew-all/*.rb | xargs -I{} basename {} .rb`; do brew install $x; done
 
