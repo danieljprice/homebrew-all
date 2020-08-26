@@ -4,8 +4,12 @@ name: denoise
 # events but only for the master branch
 on:
   push:
+    paths:
+    - 'denoise.rb'
     branches: [ master ]
   pull_request:
+    paths:
+    - 'denoise.rb'
     branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
