@@ -26,8 +26,8 @@ jobs:
     - name: tap the repo
       run: brew tap danieljprice/all
 
-    - name: install Xquartz using brew cask
-      run: brew cask install xquartz
+#    - name: install Xquartz using brew cask
+#      run: brew cask install xquartz
 
     - name: install splash with homebrew
       run: brew install splash
