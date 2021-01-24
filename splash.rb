@@ -6,7 +6,7 @@ class Splash < Formula
   version "3.0.2"
   sha256 "882111b02e09faa229e539ab887dc02fda74c14ecd2c9b1619fbdd7fead398e1"
   depends_on "gcc"
-  depends_on "giza"
+  depends_on "giza-x11"
   depends_on "hdf5"
   depends_on "cfitsio"
 
