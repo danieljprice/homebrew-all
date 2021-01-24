@@ -5,11 +5,11 @@ name: giza
 on:
   push:
     paths:
-    - 'giza.rb'
+    - 'giza-x11.rb'
     branches: [ master ]
   pull_request:
     paths:
-    - 'giza.rb'
+    - 'giza-x11.rb'
     branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -25,9 +25,6 @@ jobs:
 
     - name: tap the repo
       run: brew tap danieljprice/all
-
-#    - name: install Xquartz using brew cask
-#      run: brew cask install xquartz
 
     - name: install giza with homebrew
       run: brew install giza
