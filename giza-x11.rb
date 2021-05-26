@@ -6,7 +6,7 @@ class GizaX11 < Formula
   version "1.2.0"
   sha256 "607c557fa5e4fadb7ebeab9e5459c8591e461552972e08722e602f4b4280372d"
   depends_on "gcc" => :build
-  depends_on "cairo-x11" => :build
+  depends_on "cairo" => :build
   depends_on "libx11"
   depends_on "freetype"
 
