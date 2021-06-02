@@ -18,7 +18,7 @@ class Mcfost < Formula
     ENV.deparallelize
     Dir.chdir('src/')
     mkdir_p lib.to_s # equivalent to mkdir -p #{lib}
-    mkdir_p include.to_s # equivalent to mkdir -p #{include}
+    mkdir_p include.to_s
     system "make","all","SYSTEM=gfortran", "MCFOST_INSTALL=#{HOMEBREW_PREFIX}", \
            "MCFOST_NO_XGBOOST=yes","MCFOST_GIT=1","CXX=#{ENV.cxx}", \
            "INCLUDE=-I#{HOMEBREW_PREFIX}/include","LIBS=#{HOMEBREW_PREFIX}/lib"
