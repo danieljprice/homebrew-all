@@ -2,7 +2,7 @@
 class VoroDev < Formula
   desc "Voro++, a 3D cell-based Voronoi library"
   homepage "http://math.lbl.gov/voro++/"
-  url "https://code.lbl.gov/svn/voro/trunk", :using => :svn, revision: "604"
+  url "https://github.com/cpinte/voro", :using => :git
   version "0.4.6+"
   license "Redistribution of source and binary permitted with attribution and copyright"
 
