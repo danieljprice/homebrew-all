@@ -11,7 +11,7 @@ class Mcfost < Formula
   depends_on "voro-dev"
 
   head do
-    url "https://github.com/cpinte/mcfost", :using => :git
+    url "https://github.com/cpinte/mcfost", :using => :git, branch: "AtomicTransfer"
   end
 
   def install
