@@ -1,6 +1,7 @@
 ![splash](https://github.com/danieljprice/homebrew-all/workflows/splash/badge.svg)
 ![giza](https://github.com/danieljprice/homebrew-all/workflows/giza/badge.svg)
 ![denoise](https://github.com/danieljprice/homebrew-all/workflows/denoise/badge.svg)
+![mcfost](https://github.com/danieljprice/homebrew-all/workflows/mcfost/badge.svg)
 
 # brew tap danieljprice/all
 
