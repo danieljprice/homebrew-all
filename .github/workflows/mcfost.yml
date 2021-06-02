@@ -22,11 +22,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: tap the repo
       run: brew tap danieljprice/all
 
     - name: install mcfost with homebrew
+      env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: brew install mcfost
