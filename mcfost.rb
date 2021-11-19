@@ -3,7 +3,7 @@ class Mcfost < Formula
   desc "Monte Carlo Radiative Transfer code"
   homepage "https://ipag.osug.fr/~pintec/mcfost/docs/html/index.html"
   url "https://github.com/cpinte/mcfost", :using => :git
-  version "3.0.40"
+  version "3.0.42"
   depends_on "gcc"
   depends_on "hdf5"
   depends_on "cfitsio"
