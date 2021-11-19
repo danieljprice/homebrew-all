@@ -2,9 +2,9 @@
 class Splash < Formula
   desc "Smoothed Particle Hydrodynamics visualisation tool"
   homepage "http://users.monash.edu.au/~dprice/splash"
-  url "https://github.com/danieljprice/splash/releases/download/v3.3.1/splash-v3.3.1.tar.gz"
-  version "3.3.1"
-  sha256 "24b1e91d5402f7ef7f3394896dfbbd01da5fb21d8dab25e2389563b8a045d3c7"
+  url "https://github.com/danieljprice/splash/releases/download/v3.3.3/splash-v3.3.3.tar.gz"
+  version "3.3.3"
+  sha256 "dc43f1b53d30b425a60ae4dfee9060357552ebb6c48347b437a7accd715d14b3"
   depends_on "gcc"
   depends_on "giza-x11"
   depends_on "hdf5"
