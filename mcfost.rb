@@ -24,6 +24,7 @@ class Mcfost < Formula
            "INCLUDE=-I#{HOMEBREW_PREFIX}/include","LIBS=#{HOMEBREW_PREFIX}/lib"
     bin.install Dir["mcfost"]
     lib.install Dir["libmcfost.a"]
+    include.install Dir["mcfost2phantom.mod"]
   end
 
   test do
