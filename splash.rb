@@ -3,20 +3,20 @@ class Splash < Formula
   desc "Smoothed Particle Hydrodynamics visualisation tool"
   homepage "http://users.monash.edu.au/~dprice/splash"
   url "https://github.com/danieljprice/splash/releases/download/v3.5.1/splash-v3.5.1.tar.gz"
-  version "3.5.1"
   sha256 "9bcac830d6810efa3ee4360593b37d4180773b685a528b58fd0331ce8546288a"
+
+  head "https://github.com/danieljprice/splash.git"
+
+  depends_on "cfitsio"
   depends_on "gcc"
   depends_on "giza-x11"
   depends_on "hdf5"
-  depends_on "cfitsio"
-
-  head do
-    url "https://github.com/danieljprice/splash", :using => :git
-  end
 
   def install
     ENV.deparallelize
-    system "make", "all", "HDF5=yes", "FITS=yes", "SYSTEM=gfortran", "PREFIX=#{prefix}/", "GIZA_DIR=#{HOMEBREW_PREFIX}", "CC=#{ENV.cc}", "HDF5ROOT=#{HOMEBREW_PREFIX}", "FITS_DIR=#{HOMEBREW_PREFIX}"
+    system "make", "all", "HDF5=yes", "FITS=yes", "SYSTEM=gfortran", "PREFIX=#{prefix}/", \
+           "GIZA_DIR=#{HOMEBREW_PREFIX}", "CC=#{ENV.cc}", "HDF5ROOT=#{HOMEBREW_PREFIX}", \
+           "FITS_DIR=#{HOMEBREW_PREFIX}"
     mkdir_p bin.to_s # equivalent to mkdir -p #{bin}
     system "make", "install", "PREFIX=#{prefix}"
   end
