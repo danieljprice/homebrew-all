@@ -5,12 +5,13 @@ class Splash < Formula
   url "https://github.com/danieljprice/splash/releases/download/v3.7.2/splash-v3.7.2.tar.gz"
   version "3.7.2"
   sha256 "c53b3c87aa68c16d05677fcf851c69bacc2857e658eb9e35168762b0023d95ca"
+  revision 2
 
   head "https://github.com/danieljprice/splash.git"
 
   depends_on "cfitsio"
   depends_on "gcc"
-  depends_on "giza-x11"
+  depends_on "giza"
   depends_on "hdf5"
 
   def install
