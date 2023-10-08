@@ -9,6 +9,7 @@ Homebrew install scripts ("taps") for various packages I maintain, including:
 - splash
 - giza
 - denoise
+- sphmoments
 
 # Example usage:
 ```
