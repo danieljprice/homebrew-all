@@ -1,15 +1,15 @@
-name: giza
+name: sphmoments
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
     paths:
-    - 'giza-x11.rb'
+    - 'sphmoments.rb'
     branches: [ master ]
   pull_request:
     paths:
-    - 'giza-x11.rb'
+    - 'sphmoments.rb'
     branches: [ master ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -26,5 +26,5 @@ jobs:
     - name: tap the repo
       run: brew tap danieljprice/all
 
-    - name: install giza with homebrew
-      run: brew install giza-x11
+    - name: install sphmoments with homebrew
+      run: brew install sphmoments
