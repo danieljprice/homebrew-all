@@ -2,8 +2,9 @@
 class Sphmoments < Formula
   desc "Utility for computing smooth moment maps of astronomical data cubes using kernel interpolation"
   homepage "https://github.com/danieljprice/sphmoments"
-  url "https://github.com/danieljprice/sphmoments/releases/download/v0.9.0/sphmoments-v0.9.0.tar.gz"
-  sha256 "f75a84cf9dc408af5b99db4fbccfbc48cb254cec3cb35342a633abeece10f195"
+  url "https://github.com/danieljprice/sphmoments/releases/download/v0.9.5/sphmoments-v0.9.5.tar.gz"
+  version "0.9.5"
+  sha256 "7d128a361dfa7fb85cb09b688a5747d51366b36131fb526e0f478b7a81092818"
 
   head "https://github.com/danieljprice/sphmoments.git"
 
