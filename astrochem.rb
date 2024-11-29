@@ -9,14 +9,14 @@ class Astrochem < Formula
   depends_on "sundials"
   depends_on "automake"
   depends_on "libtool"
-  depends_on "python@3.10"
   depends_on "numpy"
+  depends_on "python"
 
   def install
     system "./bootstrap"
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
+    system "./configure", "--disable-debug", \
+                          "--disable-dependency-tracking",\
+                          "--disable-silent-rules",\
                           "--prefix=#{prefix}"
     system "make", "install"
   end
