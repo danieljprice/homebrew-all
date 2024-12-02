@@ -2,9 +2,9 @@
 class GizaX11 < Formula
   desc "Scientific plotting library for C/Fortran"
   homepage "https://danieljprice.github.io/giza/"
-  url "https://github.com/danieljprice/giza/releases/download/v1.4.2/giza-v1.4.2.tar.gz"
-  version "1.4.2"
-  sha256 "85807f12e4584d2458046dc8f7cecdcfdb24dadcbe8694641cabb0ca18aacc8a"
+  url "https://github.com/danieljprice/giza/releases/download/v1.4.3/giza-v1.4.3.tar.gz"
+  version "1.4.3"
+  sha256 "3ff9beaef8b60e50cf082168d6826b97906f6c7023fcc6a7e96b4c4d9381f477"
   depends_on "pkg-config" => :build
   depends_on "gcc" => :build
   depends_on "cairo" => :build
