@@ -28,7 +28,7 @@ class Finufft < Formula
     system "cmake", "--build", "build"
 
     # Install test files to share directory after build but before install
-    (share/"finufft").install "test"
+    pkgshare.install "test"
 
     system "cmake", "--install", "build"
 
