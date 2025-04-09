@@ -11,14 +11,20 @@ class Finufft < Formula
   depends_on "libomp"
 
   def install
-    system "cmake", "-S", ".", "-B", "build",
-           "-DFINUFFT_BUILD_TESTS=ON",
-           "-DFINUFFT_BUILD_EXAMPLES=ON",
-           "-DFINUFFT_BUILD_FORTRAN=ON",
-           "-DCMAKE_INSTALL_PREFIX=#{prefix}",
-           "-DCMAKE_C_COMPILER=#{ENV.cc}",
-           "-DCMAKE_CXX_COMPILER=#{ENV.cxx}",
-           "-DCMAKE_CXX_FLAGS='-std=c++17'"
+    # Check if MATLAB exists
+    matlab_exists = !`which matlab`.empty?
+
+    args = std_cmake_args + %W[
+      -DFINUFFT_BUILD_TESTS=ON
+      -DFINUFFT_BUILD_EXAMPLES=ON
+      -DFINUFFT_BUILD_FORTRAN=ON
+      -DCMAKE_C_COMPILER=#{ENV.cc}
+      -DCMAKE_CXX_COMPILER=#{ENV.cxx}
+      -DCMAKE_CXX_FLAGS='-std=c++17'
+      -DFINUFFT_BUILD_MATLAB=#{matlab_exists ? "ON" : "OFF"}
+    ]
+
+    system "cmake", "-S", ".", "-B", "build", *args
     system "cmake", "--build", "build"
 
     # Install test files to share directory after build but before install
@@ -27,7 +33,7 @@ class Finufft < Formula
     system "cmake", "--install", "build"
 
     # Ensure all headers are installed
-    include.install Dir["include/finufft.h"]
+    include.install "include/finufft.h"
     (include/"finufft").install Dir["include/finufft/*"]
   end
 
