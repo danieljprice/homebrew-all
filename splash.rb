@@ -9,7 +9,7 @@ class Splash < Formula
 
   depends_on "cfitsio"
   depends_on "gcc"
-  depends_on "giza-x11"
+  depends_on "giza"
   depends_on "hdf5"
 
   def install
