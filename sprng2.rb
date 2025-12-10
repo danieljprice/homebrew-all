@@ -2,7 +2,8 @@
 class Sprng2 < Formula
   desc "The Scalable Parallel Random Number Generators Library"
   homepage "http://sprng.org"
-  url "http://sprng.org/Version2.0/sprng2.0b.tar.gz"
+  url "https://github.com/danieljprice/homebrew-all/releases/download/v1.0.0/sprng2.0b.tar.gz"  
+  #url "http://sprng.org/Version2.0/sprng2.0b.tar.gz"
   version "2.0"
   sha256 "8985d7cae4f20f57889bc7ba11dfed226a02057d396731f4a5cc174704131ac2"
   license "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International"
