@@ -1,5 +1,5 @@
 # splash homebrew install script
-class Splash < Formula
+class SplashReleaseTesting < Formula
   desc "Smoothed Particle Hydrodynamics visualisation tool test repo"
   homepage "http://users.monash.edu.au/~dprice/splash"
   url "https://github.com/danieljprice/splash-release-testing/releases/download/v3.12.0/splash-v3.12.0.tar.gz"
