@@ -2,8 +2,8 @@
 class Mcfost < Formula
   desc "Monte Carlo Radiative Transfer code"
   homepage "https://ipag.osug.fr/~pintec/mcfost/docs/html/index.html"
-  url "https://github.com/cpinte/mcfost.git", :branch => "main"
-  version "4.1.10"
+  url "https://github.com/danieljprice/mcfost.git", :branch => "main"
+  version "latest"
 
   # specifying --HEAD installs from DJP's fork instead
   head "https://github.com/danieljprice/mcfost.git", :branch => "main"
