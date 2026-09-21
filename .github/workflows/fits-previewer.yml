@@ -1,15 +1,16 @@
 name: fits-previewer
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
+# Triggers on push or pull request to main when this formula or workflow changes
 on:
   push:
     paths:
     - 'fits-previewer.rb'
+    - '.github/workflows/fits-previewer.yml'
     branches: [ main ]
   pull_request:
     paths:
     - 'fits-previewer.rb'
+    - '.github/workflows/fits-previewer.yml'
     branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
