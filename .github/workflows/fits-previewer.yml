@@ -21,10 +21,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v5
 
     - name: tap the repo
-      run: brew tap danieljprice/all
+      run: |
+        brew tap danieljprice/all
+        brew trust danieljprice/all
 
     - name: install fits-previewer with homebrew
       run: brew install --cask fits-previewer
