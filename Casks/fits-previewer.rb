@@ -24,4 +24,9 @@ cask "fits-previewer" do
     "~/Library/Containers/com.fitspreviewer.FitsPreviewer.Preview",
     "~/Library/Containers/com.fitspreviewer.FitsPreviewer.Thumbnail",
   ]
+
+  caveats <<~EOS
+    Launch FitsPreviewer once so macOS registers the Quick Look extension.
+    Open it from Applications, then select a FITS file in Finder and press the spacebar.
+  EOS
 end
