@@ -8,7 +8,7 @@ cask "fits-previewer" do
   homepage "https://github.com/danieljprice/fits-previewer"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "FitsPreviewer.app"
 
