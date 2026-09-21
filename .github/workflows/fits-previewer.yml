@@ -4,12 +4,12 @@ name: fits-previewer
 on:
   push:
     paths:
-    - 'fits-previewer.rb'
+    - 'Casks/fits-previewer.rb'
     - '.github/workflows/fits-previewer.yml'
     branches: [ main ]
   pull_request:
     paths:
-    - 'fits-previewer.rb'
+    - 'Casks/fits-previewer.rb'
     - '.github/workflows/fits-previewer.yml'
     branches: [ main ]
 
