@@ -14,10 +14,10 @@ cask "fits-previewer" do
 
   # An ad-hoc signature plus the download quarantine flag makes macOS
   # report the app as damaged.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args:         ["-dr", "com.apple.quarantine", "#{appdir}/FitsPreviewer.app"],
-                   must_succeed: false
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args:         ["-dr", "com.apple.quarantine", "{{appdir}}/FitsPreviewer.app"],
+        must_succeed: false
   end
 
   zap trash: [
