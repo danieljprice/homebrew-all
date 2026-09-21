@@ -1,6 +1,6 @@
 cask "fits-previewer" do
-  version "0.6.0"
-  sha256 "fe5cf32c249fdacf4afd7779d770f70601b89effe5bd4ce0e2d0407ae9a0d0e4"
+  version "0.7.0"
+  sha256 "27a54961d24b34643d7318d9dff6169e8544afd3d0104bd54bace2b94fadf8e9"
 
   url "https://github.com/danieljprice/fits-previewer/releases/download/v#{version}/FitsPreviewer.zip"
   name "FitsPreviewer"
@@ -16,7 +16,7 @@ cask "fits-previewer" do
   # report the app as damaged.
   postflight do
     system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/FitsPreviewer.app"],
+                   args:         ["-dr", "com.apple.quarantine", "#{appdir}/FitsPreviewer.app"],
                    must_succeed: false
   end
 
