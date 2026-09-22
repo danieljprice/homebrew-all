@@ -20,7 +20,30 @@ cask "fits-previewer" do
         must_succeed: false
   end
 
+  # Drop the Quick Look extensions from PlugInKit before the app is removed,
+  # so System Settings → Login Items & Extensions → Quick Look clears.
+  uninstall_preflight_steps do
+    terminate_process "FitsPreviewer", must_succeed: false
+    terminate_process "FitsPreview", must_succeed: false
+    terminate_process "FitsThumbnail", must_succeed: false
+    run "/usr/bin/pluginkit",
+        args:         ["-r", "{{appdir}}/FitsPreviewer.app/Contents/PlugIns/FitsPreview.appex"],
+        must_succeed: false
+    run "/usr/bin/pluginkit",
+        args:         ["-r", "{{appdir}}/FitsPreviewer.app/Contents/PlugIns/FitsThumbnail.appex"],
+        must_succeed: false
+    run "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister",
+        args:         ["-u", "{{appdir}}/FitsPreviewer.app"],
+        must_succeed: false
+  end
+
+  uninstall_postflight_steps do
+    run "/usr/bin/qlmanage", args: ["-r"], must_succeed: false
+    run "/usr/bin/qlmanage", args: ["-r", "cache"], must_succeed: false
+  end
+
   zap trash: [
+    "~/Library/Containers/com.fitspreviewer.FitsPreviewer",
     "~/Library/Containers/com.fitspreviewer.FitsPreviewer.Preview",
     "~/Library/Containers/com.fitspreviewer.FitsPreviewer.Thumbnail",
   ]
