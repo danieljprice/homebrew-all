@@ -13,11 +13,15 @@ cask "fits-previewer" do
   app "FitsPreviewer.app"
 
   # An ad-hoc signature plus the download quarantine flag makes macOS
-  # report the app as damaged.
+  # report the app as damaged. Reset Quick Look and restart Finder so
+  # thumbnails pick up the new extension without a manual relaunch.
   postflight_steps do
     run "/usr/bin/xattr",
         args:         ["-dr", "com.apple.quarantine", "{{appdir}}/FitsPreviewer.app"],
         must_succeed: false
+    run "/usr/bin/qlmanage", args: ["-r"], must_succeed: false
+    run "/usr/bin/qlmanage", args: ["-r", "cache"], must_succeed: false
+    terminate_process "Finder", must_succeed: false
   end
 
   # Drop the Quick Look extensions from PlugInKit before the app is removed,
