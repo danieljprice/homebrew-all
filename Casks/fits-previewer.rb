@@ -26,7 +26,7 @@ cask "fits-previewer" do
   ]
 
   caveats <<~EOS
-    Launch FitsPreviewer once so macOS registers the Quick Look extension.
-    Open it from Applications, then select a FITS file in Finder and press the spacebar.
+    Launch FitsPreviewer once to register Quick Look extension.
+    Open from Applications, then press space on a .fits or .fits.gz file in Finder.
   EOS
 end
