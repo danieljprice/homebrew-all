@@ -1,6 +1,6 @@
 cask "fits-previewer" do
-  version "0.8.1"
-  sha256 "8ef5bf0768dee21861b21d2a5683ce36545d5600b4705eefbd7629bdc0b490cf"
+  version "1.0"
+  sha256 "397a0de1e118ac12aaa0d862d0558f511b7d34bcc4a306249d90034b28919b69"
 
   url "https://github.com/danieljprice/fits-previewer/releases/download/v#{version}/FitsPreviewer.zip"
   name "FitsPreviewer"
