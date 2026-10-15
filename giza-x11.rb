@@ -5,11 +5,13 @@ class GizaX11 < Formula
   url "https://github.com/danieljprice/giza/releases/download/v2.0.2/giza-v2.0.2.tar.gz"
   version "2.0.2"
   sha256 "2dc801eb976ab28d083cb41b5e4dc595c4d956d9fed173c5d76fcf29eca0210d"
+
   depends_on "pkg-config" => :build
   depends_on "gcc" => :build
-  depends_on "cairo" => :build
-  depends_on "libx11"
+  depends_on "cairo"
+  depends_on "fontconfig"
   depends_on "freetype"
+  depends_on "libx11"
 
   head do
     url "https://github.com/danieljprice/giza", :using => :git
